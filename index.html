@@ -63,18 +63,17 @@
 
         <!-- Hello -->
         <section>
-            <h1>JavaScript fonctionnel</h1>
-            <h2>Paris Web'16</h2>
-            <h3 style="text-transform:lowercase"><a href="http://github.com/vincent/js-fp">github.com/vincent/js-fp</a></h3>
+            <h1>Functional JavaScript</h1>
+            <h3 style="text-transform:lowercase"><a href="http://github.com/vincent/js-fp">github.com/biou/js-fp-en</a></h3>
         </section>
 
         <!-- Hello -->
         <section>
             <h1>say('Hello world')</h1>
             <aside class="notes">
-              Bonjour !
+              hello !
               <br>
-              Bienvenue, et merci de venir assister à cette présentation de la programmation fonctionnelle en Javascript.
+              welcome to func prog javascript workshop
             </aside>
         </section>
 
@@ -83,18 +82,16 @@
           <div class="clearfix">
             <img class="speaker-pic" src="css/alain.jpg">
             <h2>Alain Vagner<br>@biou</h2>
-            <span>procrastination fonctionnelle</span>
+            <span><em>functional procrastination</em></span>
           </div>
           <br><br>
           <div class="clearfix">
             <img class="speaker-pic" src="css/vincent.jpg">
             <h2>Vincent Lark<br>@allyouneedisgnu</h2>
-            <span>function is undefined</span>
+            <span><em>function is undefined</em></span>
           </div>
           <aside class="notes">
-            Tout d'abord, une rapide présentation.
-            <br>
-            Nous sommes Alain et Vincent, nous travaillons chacun sur des projets Web dans la région Nord Est depuis une dizaine d'années.
+
           </aside>
         </section>
 
@@ -102,85 +99,73 @@
         <section>
           <h1>Introduction</h1>
           <ul>
-            <li>Découverte de la prog. fonctionnelle</li>
-            <li>Concepts basiques et exemples concrets<br><br></li>
-            <li>Posez vos questions pendant l'atelier !</li>
+            <li>Discover functional programming</li>
+            <li>Basic concepts and concrete examples<br><br></li>
+            <li>Ask questions!</li>
           </ul>
           <aside class="notes">
-            Nous vous proposons donc vous faire découvrir la prog. fonctionnelle en JS,
-            <br>
-            en tout cas ses concepts les plus simples, par des ex. concrets et amusants
-            <br>
-            N'hésitez surtout pas à poser vos questions ! si qlq chose n'est pas clair, on y répond direct.
+            discover func prog through the simplest concepts, through concrete and funny examples<br>
+            ask questions
           </aside>
         </section>
 
-        <!-- Parti pris -->
         <section>
           <h1>Warning</h1>
           <ul>
-            <li>Malgré les syntaxes évoluées des specs modernes...</li>
-            <li>On utilisera ici ES5 / JS 1.8</li>
-            <li>Vérifiez la compatibilité sur <a href="http://developer.mozilla.org">MDN</a> ou <a href="http://caniuse.com">caniuse.com</a> !</li>
+            <li>Modern specs provide new syntax, but...</li>
+            <li>We'll use here ES5 / JS 1.8</li>
+            <li>Check compatibilty with <a href="http://developer.mozilla.org">MDN</a> or <a href="http://caniuse.com">caniuse.com</a>!</li>
           </ul>
           <aside class="notes">
-            SONDAGE !<br>
-            qui utilise le JS de près ou de loin ?<br>
-            qui utilise le JS surtout via jQuery ?<br>
-            qui utilise le JS de façon intensive, avec du Node ?<br>
-            Un petit warning avant de commencer cette prez.. malgré les nouvelles syntaxes et autre joyeusetés qu'apporte ES6 et suivants, nous on utilisera aujourd'hui le simple EcmaScript 5<br>
-            Le but est surtout de ne pas ajouter de barrière à la compréhension, que tout le monde puisse tester, etc..
+            SURVEY !<br>
+            - who is coding JS on a daily basis?<br>
+            - who is mainly using jQuery?<br>
+            - who is using Node.js?<br>
+            restrict to ES5 to avoid adding barriers to understanding, everyone can test, etc.
           </aside>
         </section>
 
-        <!-- Définition -->
         <section>
           <img class="workimg" src="css/workimg/johnny-automatic-blueprints-800px.png" style="position: absolute;height: 62%;right:-10%;top:-40%;">
-          <h1>Définition</h1>
+          <h1>Definition</h1>
           <blockquote>
-            Une méthode de programmation qui préfère l'utilisation de fonctions aux changements d'état.
+            A programming method that prefers using functions to state changes.
           </blockquote>
           <aside class="notes">
-            plein d'autres définitions, on a essayé de faire simple ici<br>
-            concept de base: fonction, <br>
-            on va tout faire à base de fonction, composer des fonctions entre elles, etc.<br>
-            tout en essayant d'éviter les changements d'états<br>
-            c'est ce qui la différencie des autres méthodes de programmation comme l'impératif ou la POO<br>
+            lots of other definitions, we tried to keep it simple here<br>
+            base concept: function<br>
+            we will do everything with functions, compose them, etc.<br>
+            but at the same time trying to avoid state changes<br>
+            that the main difference with other methods like imperative or OOP<br>
           </aside>
         </section>
 
         <section>
           <img class="workimg" src="css/workimg/johnny-automatic-holding-the-bow-800px.png" style="position: absolute;height:85%;right:-10%;top:-40%;">
-          <h1>À quoi ça sert?</h1>
+          <h1>Goal?</h1>
           <ul>
-            <li>Moins d'effets de bords</li>
-            <li>Plus maintenable</li>
-            <li>Plus modulaire</li>
-            <li>Plus robuste</li>
+            <li>Less side effects</li>
+            <li>More maintainable</li>
+            <li>More modular</li>
+            <li>More reliable</li>
           </ul>
           <aside class="notes">
-            Pourquoi des gens se sont tournés vers la prog. fonctionelle ?
+            why ppl looking towards func prog?
             <br>
-            Nous irons plus en profondeur par la suite, mais on peut déjà dire que les buts sont d'abord<br>
-            - de réduire les effets de bords, un effet de bord étant un changement d'état non voulu, non maîtrisé<br>
-            - de rendre le code plus maintenable<br>
-            - plus modulaire<br>
-            - plus robuste<br>
+            go deeper later but goals are<br>
+            - reduce side effects, being unwanted state change<br>
+            - ...<br>
           </aside>
         </section>
 
-        <!-- Comparaison -->
         <section data-external="slides/comparaison.html"></section>
 
-        <!-- Exercice 1 -->
         <section>
           <section>
             <img class="workimg" src="css/workimg/johnny-automatic-withdrawing-the-iron-800px.png">
             <h1>Getting started</h1>
             <aside class="notes">
-              Alain<br>
-              Avant d'aller plus loin, je vous propose d'ouvrir le support d'atelier que l'on vous a fourni.<br>
-              Si vous ne l'avez pas, demandez-le nous, on vous le donnera sur clé USB, c'est rapide à mettre en place.<br>
+              open the app
             </aside>
           </section>
           <section data-external="slides/exercices/_start.html"></section>
@@ -189,21 +174,18 @@
           <section data-external="slides/midi2.html"></section>
         </section>
 
-        <!-- Fil rouge -->
         <section>
           <section>
             <img class="workimg" src="css/workimg/johnny-automatic-Dapper-Dan-800px.png" style="position:absolute;right:-16%">
             <h1>Functions as first class citizen</h1>
-            <h4>Fonctions d'ordre supérieur</h4>
+            <h4>Higher order functions</h4>
             <br>
             <blockquote>
-              Les fonctions peuvent être passées en paramètre<br>
-              et/ou en retour d'autres fonctions.
+              Functions as parameters or return value<br>
+              of other functions
             </blockquote>
             <aside class="notes">
-              Vincent<br>
-              Passons maintenant au concept probablement le plus important de la prog. fonctionnelle<br>
-              Le concept de fonctions d'ordre supérieur
+              one of the most important concepts of func prog
             </aside>
           </section>
           <section data-external="slides/function_as_argument.html"></section>
@@ -216,10 +198,9 @@
             <img class="workimg" src="css/workimg/paring-800px.png" style="height:35%">
             <h1>Collections</h1>
             <aside class="notes">
-              Alain<br>
-              Utilisation la plus courante du style fonctionel: les listes ou collections<br>
-              Souvent besoin du concept d'itération, sous différentes formes<br>
-              Quelques exemples les plus utiles
+              most frequent use of the functional style: collections<br>
+              need of iterations<br>
+              most useful examples
             </aside>
           </section>
           <section data-external="slides/filter.html"></section>
@@ -232,25 +213,22 @@
           <section data-external="slides/exercices/collections.html"></section>
         </section>
 
-        <!-- Effets de bord -->
         <section>
           <section>
             <img class="workimg" src="css/workimg/johnny-automatic-marking-distance-800px.png" style="height:35%">
-            <h1>Fonctions pures<br><small>&amp;</small><br>Effets de bord</h1>
+            <h1>Pure functions<br><small>&amp;</small><br>Side effects</h1>
             <aside class="notes">
-              Vincent<br>
-              différencier la prog. fonc. des autres paradigmes.<br>
             </aside>
           </section>
           <section>
             <img class="workimg" src="css/workimg/johnny-automatic-wing-800px.png" style="height:80%;right:-10%;position:absolute;top:-25%">
-            <h1>Fonctions pures</h1>
+            <h1>Pure functions</h1>
             <blockquote>
-              Une fonction pure est une fonction déterministe sans changements d'état.
+              A pure function is a deterministic function without state changes.
             </blockquote>
             <br>
             <blockquote>
-              Elle n'utilise que ses paramètres et ses variables locales.
+              It uses only its parameters and local variables.
             </blockquote>
           </section>
 
@@ -259,21 +237,19 @@
           <section data-external="slides/ex_fonctionpure.html"></section>
 
           <section>
-            <h1>Pour quoi faire ?</h1>
+            <h1>What for?</h1>
             <blockquote>
-              En gardant des fonctions pures, on évite les mutations, et donc les effets de bords.
+              By keeping functions pure, we avoid mutations and thus side effects.
             </blockquote>
             <aside class="notes">
-              Vincent<br>
-              mais pas d'effet de bord = pas d'objet ??
+              no side effect = no object??
             </aside>
           </section>
 
           <section>
             <aside class="notes">
-              Vincent<br>
             </aside>
-            <h1>La POO et la prog. fonctionnelle sont incompatibles ?</h1>
+            <h1>Are OOP and func. prog. not compatible? </h1>
           </section>
           <section data-external="slides/mixpoofonctionelle.html"></section>
         </section>
@@ -282,7 +258,6 @@
         <section>
           <section>
             <aside class="notes">
-              Alain<br>
             </aside>
             <h1>Composition</h1>
             <img class="workimg" src="css/workimg/johnny-automatic-big-sandwich-800px.png" style="height:50%;float:none">
@@ -295,19 +270,18 @@
 
         <section>
             <section>
-                <h1>Application partielle de fonction</h1>
+                <h1>Partial function application</h1>
             </section>
             <section data-external="slides/curry.html"></section>
             <section data-external="slides/curry2.html"></section>
             <section data-external="slides/curry3.html"></section>
         </section>
 
-        <!-- concepts avancés -->
         <section>
           <section>
-            <h1>Concepts avancés</h1>
+            <h1>Advanced concepts</h1>
             <aside class="notes">
-              concepts avancés ou design patterns, on les retrouve dans la plupart des langages fonctionnels<br>
+              or design patterns, can be found in most functional languages<br>
             </aside>
           </section>
           <section data-external="slides/struct-algebriques.html"></section>
@@ -320,24 +294,13 @@
           <section data-external="slides/promises4.html"></section>
         </section>
 
-        <!-- Les amis - ->
         <section>
           <section>
-            <h1>Les amis</h1>
-          </section>
-          <section data-external="slides/asynchonism.html"></section>
-          <section data-external="slides/promises.html"></section>
-        </section>
-        <!-- -->
-
-        <!-- Ecosystème -->
-        <section>
-          <section>
-            <h1>Ecosystème</h1>
+            <h1>Ecosystem</h1>
             <img class="workimg" src="css/workimg/johnny-automatic-landscape-5-800px.png" style="height:auto;margin: 15% 7% 0 auto">
           </section>
           <section>
-            <h1>Les libs</h1>
+            <h1>Libs</h1>
             <img class="workimg" src="css/workimg/johnny-automatic-books-800px.png" style="height:auto;margin:8% 26% 0 auto;width:50%;">
           </section>  
           <section data-external="slides/lodash.html"></section>
@@ -348,7 +311,7 @@
           <section data-external="slides/async.html"></section>
           <section data-external="slides/fpjslibs.html"></section>
           <section>
-            <h1>Le futur</h1>
+            <h1>The future</h1>
             <img class="workimg" src="css/workimg/steamman-black-800px.png" style="float:none;margin:0;height:60%">
           </section>
           <section data-external="slides/es6-7.html"></section>
@@ -356,7 +319,7 @@
 
         <!-- Bye -->
         <section>
-          <h1>Questions ?<h1>
+          <h1>Questions?<h1>
         </section>
         <section data-external="slides/biblio.html"></section>
       </div>
