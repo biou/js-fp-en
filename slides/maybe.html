@@ -1,24 +1,24 @@
-<h1>Monade: Maybe</h1>
+<h1>Monad: Maybe</h1>
 
 <blockquote>
-Soit un objet, soit <em>null</em>
+An object or <em>null</em>
 </blockquote>
 <pre><code  class="javascript" data-trim data-noescape>
-// création d'un Maybe
+// creation of a Maybe
 var a = Maybe.some(object)
 var b = Maybe.none()
 
-// chaîner
-var c = a.chain(task); 
-// task n'a pas besoin de gérer le cas null / undefined
+// chaining
+var c = a.chain(task).chain(task2); 
+// task and task2 do not need to manage the case null / undefined
 
-// récupérer la valeur (si nécessaire)
+// get the value (if needed)
 var d = c.getOrElse(default)
 var e = c.isNone()
 </code></pre>
 
 <aside class="notes">
-utile pour éviter de dupliquer des tests de valeurs null ou undefined dans chaque fonction d'une chaîne<br>
-la méthode flatMap est aussi appelée chain
+useful to avoid to duplicate testing for null or undefined values in each function of the chain<br>
+another name of chain is flatMap 
 </aside>
 

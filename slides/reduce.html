@@ -2,22 +2,22 @@
 <h1>reduce()</h1>
 
 <blockquote>
-Réduit une liste, en appliquant une fonction à chaque<br> élément, et retourne <b>le résultat final</b>.
+Reduces a list, by applying a function to each<br>element, and returns <b>the final result</b>.
 </blockquote>
 
 <br>
 
 <pre><code class="javascript" data-trim data-noescape>
-var liste = [ 1, 2, 3 ]
+var list = [ 1, 2, 3 ]
 
-function somme(acc, e) {
+function sum(acc, e) {
   return acc + e;
 }
 
-liste.reduce(somme, 0) // 6
+list.reduce(sum, 0) // 6
 </code></pre>
 
 <aside class="notes">
-  Utile pour transformer une liste en une valeur finale: somme, moyenne, etc.<br>
-  Ou compter les éléments qui vérifient une condition
+  useful to transform a list in a final value, sum, mean, etc.<br>
+  or count elements that match a condition
 </aside>

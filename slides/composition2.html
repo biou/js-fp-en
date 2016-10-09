@@ -2,7 +2,7 @@
 
 <!-- exemple -->
 <pre><code id="composition" class="javascript" data-trim data-noescape>
-//exemple non fonctionnel
+//non functional example
 
 var notes = [ 1, 2, 3 ]
 
@@ -12,11 +12,11 @@ function displayNotes(notes, elem) {
     buffer += noteValueToText(notes[i]) + ' '
   }
   document.getElementById(elem).innerHTML = buffer
-  // affiche "ré mi fa"
+  // displays "D E F"
 }
 
 function noteValueToText(note) {
-  var notes = [ 'do', 'ré', 'mi', 'fa' , 'sol', 'la', 'si']
+  var notes = [ 'C', 'D', 'E', 'F' , 'G', 'H', 'I']
   return notes[note % 7]
 }
 

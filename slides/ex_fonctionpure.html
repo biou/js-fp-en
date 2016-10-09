@@ -1,14 +1,13 @@
-<h1>Cette ƒ° est-elle pure ?</h1>
+<h1>Is this function pure?</h1>
 
 <pre><code class="javascript" data-trim data-noescape>
-function addNote(partition, note) {
-  return [].concat(partition, note)
+function addNote(notes, note) {
+  return [].concat(notes, note)
 }
 </code></pre>
 
-<h4 class="fragment"><br>OUI: elle est déterministe<br>et n'effectue aucune mutation d'une variable externe</h4>
+<h4 class="fragment"><br>YES: determinist and without mutation<br> of an external variable</h4>
 
 <aside class="notes">
-  Cette fonction est pure car elle ne dépend d'aucune variable externe<br>
-  Et renverra tjs le même résultat avec les mêmes paramètres
+  we will always get the same result for the same input parameters
 </aside>

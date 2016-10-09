@@ -1,22 +1,21 @@
 <h1>map()</h1>
 
 <blockquote>
-Applique une fonction à chaque élément, et<br> retourne <b>les résultats</b>.
+	Apply a function to each element, and<br>returns an array of the results
 </blockquote>
 
 <br>
 
 <pre><code class="javascript" data-trim data-noescape>
-var auteurs = [ 'Beethoven', 'Mozart', 'Bach' ]
+var compositors = [ 'Beethoven', 'Mozart', 'Bach' ]
 
-function biographie (auteur) {
-  console.log(F.wikipedia(auteur))
+function biography (author) {
+  console.log(F.wikipedia(author))
 }
 
-var bios = auteurs.map(biographie)
+var bios = compositors.map(biography)
 </code></pre>
 
 <aside class="notes">
-  Utile pour transformer une liste<br>
-  Ou appliquer un même process avec plusieurs valeurs de départ
+
 </aside>

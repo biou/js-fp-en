@@ -2,13 +2,13 @@
 <h1>flatMap()</h1>
 
 <blockquote>
-Applique une fonction à chaque élément, et<br> retourne une liste <b>"aplatie"</b>.
+Applies a function to each element, and<br> returns a <b>"flattened"</b> list.
 </blockquote>
 
 <br>
 
 <pre><code class="javascript" data-trim data-noescape>
-// définition de flatMap
+// definition of flatMap for the Array class
 // https://gist.github.com/samgiles/762ee337dff48623e729
 Array.prototype.flatMap = function (lambda) { 
   return Array.prototype.concat.apply([], this.map(lambda)) 
@@ -17,13 +17,7 @@ Array.prototype.flatMap = function (lambda) {
 </code></pre>
 
 <aside class="notes">
-même chose qu'un map suivi d'un flatten, on récupère ce que nous renvoie map, potentiellement des tableaux imbriqués et on les aplatit dans un seul tableau<br>
-n'existe pas en JS mais utilisation fréquente. La plupart des librairies style lodash l'ont.<br>
-Est proposé à la standardisation pour ES7...
+same as map followed by flatten.<br>
+Does not exist in JS but very useful. Lots of libraries like lodash have it.<br>
+Is proposed to be in the standard for ES7
 </aside>
-
-<!-- 
-
-	à discuter... 
-
--->

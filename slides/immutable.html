@@ -1,20 +1,20 @@
 <h1>Immutable.js</h1>
 <blockquote>
-  Une structure de données immuable<br> ne peut pas être modifiée une fois créée.
+  An immutable data structure<br> cannot be changed once created.
 </blockquote>
 
 <ul>
-  <li>Intérêt: éviter les couplages accidentels, cache, égalité</li>
-  <li>Structures immuables de <a href="https://facebook.github.io/immutable-js/">Immutable.js</a>: List, Stack, Map, OrderedMap, Set, OrderedSet et Record.</li>
+  <li>Benefits: prevent accidental coupling, cache, equality</li>
+  <li>Immutable structures in <a href="https://facebook.github.io/immutable-js/">Immutable.js</a>: List, Stack, Map, OrderedMap, Set, OrderedSet and Record.</li>
   <li>Alternative: <a href="https://github.com/swannodette/mori">mori</a></li>
 </ul>
 
 <!-- TODO: donner des arguments de l'intérêt des structures de données immuables en js -->
 <aside class="notes">
-Immutable.js développé par Facebook<br>
-JavaScript ne fournit pas d'objet immuable<br>
-On peut utiliser Object.freeze en JavaScript, mais l'immuabilité ne fonctionnera qu'au premier niveau.<br>
-Mémoisation: cache de résultats de calculs<br>
-test d'égalité de valeur, en JS l'égalité entre objets se base sur la référence. avec l'immutabilité, on peut savoir si un objet a été modifié ou non (et par exemple pour react, savoir si on doit mettre à jour la vue ou pas)<br>
+Immutable.js developped by facebook<br>
+JavaScript does not provide immutable objects<br>
+possible to use Object.freeze in JavaScript, but immutability will only work at the first level<br>
+Mémoisation: cache of computation results<br>
+equality tests of values. In JS, equality between objects is based on the reference. With Immutability, it is possible to know if an object has been modified or not(and for example for react to know if we should update the view or not)
 </aside>
 

@@ -3,26 +3,24 @@
 <h1>Promises</h1>
 
 <pre><code class="javascript" data-trim data-noescape>
-function allerAuBar() {
+function haveADrinkAtThePub() {
   return new Promise(function (resolve, reject) {
-    boireTrenteBieres()
+    drinkThirtyBeers()
       .done(function(){
-      	resolve('et maintenant ?')
+      	resolve('and now?')
       })
       .fail(reject)
   }
 }
 
 onSortCeSoir()
-  .then(allerAuBar)
-  .then(allerEnBoite)
-  .catch(dormir)
+  .then(haveADrinkAtThePub)
+  .then(goToTheNightClub)
+  .catch(sleep)
 
 </code></pre>
 
 <aside class="notes">
-qui peut affirmer avec certitude qu'il peut boire 30 bières ?<br>
-les Promises peuvent être chainées:<br>
-si ça va pas trop on rejette, sinon on "resoud"<br>
-l'appel peut catcher tous les problèmes potentiels dans un seul block
+promises can be chained<br>
+possible to catch all problems with the same function
 </aside>

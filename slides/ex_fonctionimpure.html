@@ -1,18 +1,16 @@
-<h1>Cette ƒ° est-elle pure ?</h1>
+<h1>Is this function pure?</h1>
 
 <pre><code class="javascript" data-trim data-noescape>
-var partition = [ 42, 24, 91, 14, 27, 34 ]
+var notes = [ 42, 24, 91, 14, 27, 34 ]
 
 function addNote(note) {
-  partition.push(note)
-  return partition
+  notes.push(note)
+  return notes
 }
 </code></pre>
 
-<h4 class="fragment"><br>NON: elle modifie une variable externe</h4>
+<h4 class="fragment"><br>NO: it is changing an external variable</h4>
 
 <aside class="notes">
-  Question pour vous: cette fonction est-elle pure ? Levez la main ..<br><br>
-  Cette fonction est impure car elle modifie la variable externe partition<br>
-  On dit qu'elle effectue une mutation sur la variable partition
+  it is  mutating the notes variable
 </aside>

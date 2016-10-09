@@ -1,15 +1,15 @@
 <h1>find()</h1>
 
 <blockquote>
-Applique une fonction à chaque élément, et<br> retourne <b>le premier</b> pour lequel cette fonction renvoie True.
+Applies a function to each element and<br> returns <b>the first element</b> for which the function returns True.
 </blockquote>
 
 <br>
 
 <pre><code class="javascript" data-trim data-noescape>
-var partition = [ 42, 24, 91, 14, 27, 34 ]
+var notes = [ 42, 24, 91, 14, 27, 34 ]
 
-partition.find(function (note) {
+notes.find(function (note) {
   return note < 30
 })
 
@@ -17,6 +17,5 @@ partition.find(function (note) {
 </code></pre>
 
 <aside class="notes">
-  Utile pour chercher un élément particulier<br>
-  Ou savoir si  "au moins 1 élément vérifie une condition"
+  useful to search an element or to know if at least 1 element fulfills a condition
 </aside>

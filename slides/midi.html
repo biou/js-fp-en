@@ -1,22 +1,21 @@
 <img class="workimg" src="css/workimg/johnny-automatic-decorative-lyre-800px.png" style="position:absolute">
-<h1>MIDI ?</h1>
+<h1>MIDI?</h1>
 
 <ul>
-  <li>Format de fichier / protocole pour la musique</li>
-  <li>Suite de messages</li>
-  <li>Un instrument midi minimaliste: <button id="demomidi">Do</button></li>
-  <li>Structure de message: <br>
+  <li>File format / protocol for music</li>
+  <li>Sequence of messages</li>
+  <li>Minimalist music instrument: <button id="demomidi">C</button></li>
+  <li>Message structure: <br>
     <table id="midimsg" class="msg"><tr><td>channel</td><td>subtype</td><td>deltaTime</td><td>noteNumber</td></tr></table> 
   </li>
 </ul>
-<!-- pour l'animation, voir dans index.html -->
 
 <aside class="notes">
-  créé en ~ 1980<br>
-  prog. fonctionnelle s'applique bien à des flux de données. Le midi fonctionne en mode flux ou en mode fichier. Le fichier est simplement un enregistrement du flux.<br>
-  principaux attributs du message:<br>
-  channel: 16 canaux midi, peuvent jouer de la musique simultanément, on peut associer un instrument différent à chaque canal<br>
-  subtype: type de message, on ne verra quasi que noteOn et noteOff pour démarrer une note et la terminer<br>
-  deltaTime: temps auquel la note sera jouée à partir du début de la session<br>
-  noteNumber: numéro de la note à jouer en nombre de tons?<br> 
+  created in the eighties<br>
+  func. prog. is good at managing data streams. Midi = streams or files. A file is simply a recording of a stream<br>
+  main attributes of a message:<br>
+  channel: 16 midi channels, can play music simultaneously, possible to assign a different music instrument to each channel<br>
+  subtype: message type, mainly noteOn / noteOff to start and finish playing a note<br>
+  deltaTime: time between this message and the previous one<br>
+  noteNumber: number of a note in semitones<br> 
 </aside>
